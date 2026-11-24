@@ -329,12 +329,19 @@
   }
 
   /* ── 7. 배경음악 ──────────────────────────────────────── */
+  // 페이지에 들어오면 바로 재생을 시도하고, 브라우저가 자동 재생을 막으면
+  // (아이폰 Safari · 인스타그램·카카오톡 인앱 브라우저 등) 방문자의 첫 터치·클릭·키 입력에서 시작한다.
   const bgm = $('#bgmAudio');
   const bgmBtn = $('#bgmBtn');
   const bgmLabel = $('#bgmLabel');
   if (bgm && bgmBtn) {
     bgm.loop = true;
     bgm.volume = 0.35; // 은은하게
+
+    let userPaused = false; // 방문자가 직접 음악을 껐는가
+    let unlocked = false;   // 브라우저가 소리 재생을 허용했는가
+
+    const UNLOCK_EVENTS = ['pointerdown', 'touchstart', 'touchend', 'click', 'keydown'];
 
     const setBgmState = (playing) => {
       bgmBtn.classList.toggle('is-playing', playing);
@@ -343,26 +350,98 @@
       if (bgmLabel) bgmLabel.textContent = playing ? '♪ BGM · ON' : '♪ BGM';
     };
 
-    bgmBtn.addEventListener('click', () => {
-      if (bgm.paused) {
-        const p = bgm.play();
-        if (p && typeof p.catch === 'function') {
-          p.then(() => setBgmState(true)).catch(() => {
-            setBgmState(false);
-            toast('브라우저가 자동 재생을 막았어요. 버튼을 한 번 더 눌러 주세요.');
-          });
-        } else {
+    let addUnlockListeners; // 아래에서 정의
+
+    const removeUnlockListeners = () => {
+      UNLOCK_EVENTS.forEach((type) => document.removeEventListener(type, onFirstInteraction, true));
+    };
+
+    const markUnlocked = () => {
+      unlocked = true;
+      if (addUnlockListeners) removeUnlockListeners();
+    };
+
+    // 첫 터치/클릭/키 입력 → 자동 시작
+    const onFirstInteraction = (e) => {
+      if (userPaused || unlocked) {
+        removeUnlockListeners();
+        return;
+      }
+      // ♪ BGM 버튼은 자기 클릭 핸들러가 처리한다 (두 번 재생되지 않도록 여기서는 건너뜀)
+      if (bgmBtn.contains(e.target)) return;
+
+      const p = bgm.play();
+      if (p && typeof p.then === 'function') {
+        p.then(() => {
+          markUnlocked();
           setBgmState(true);
-        }
+        }).catch(() => {
+          // 아직 제스처가 인정되지 않은 경우 — 다음 입력에서 다시 시도한다
+        });
       } else {
+        markUnlocked();
+        setBgmState(true);
+      }
+    };
+
+    addUnlockListeners = () => {
+      UNLOCK_EVENTS.forEach((type) => document.addEventListener(type, onFirstInteraction, true));
+    };
+
+    // 페이지 진입 즉시 자동 재생 시도
+    const tryAutoplay = () => {
+      if (userPaused || unlocked || !bgm.paused) return;
+      const p = bgm.play();
+      if (p && typeof p.then === 'function') {
+        p.then(() => {
+          markUnlocked();
+          setBgmState(true);
+        }).catch(() => {
+          // 자동 재생 차단 → 첫 터치를 기다린다
+          setBgmState(false);
+          addUnlockListeners();
+        });
+      } else {
+        markUnlocked();
+        setBgmState(true);
+      }
+    };
+
+    bgmBtn.addEventListener('click', () => {
+      markUnlocked(); // 버튼 클릭 자체가 사용자 제스처
+      if (!bgm.paused) {
+        userPaused = true;
         bgm.pause();
         setBgmState(false);
+        return;
+      }
+      userPaused = false;
+      const p = bgm.play();
+      if (p && typeof p.then === 'function') {
+        p.then(() => setBgmState(true)).catch(() => {
+          setBgmState(false);
+          toast('브라우저가 재생을 막았어요. 버튼을 한 번 더 눌러 주세요.');
+        });
+      } else {
+        setBgmState(true);
       }
     });
 
-    bgm.addEventListener('play', () => setBgmState(true));
+    bgm.addEventListener('play', () => {
+      markUnlocked();
+      setBgmState(true);
+    });
     bgm.addEventListener('pause', () => setBgmState(false));
-    setBgmState(false);
+
+    // autoplay 속성으로 이미 재생이 시작됐을 수 있으니 실제 상태에서 출발한다
+    setBgmState(!bgm.paused);
+    if (!bgm.paused) markUnlocked();
+
+    if (document.readyState === 'complete') {
+      tryAutoplay();
+    } else {
+      window.addEventListener('load', tryAutoplay, { once: true });
+    }
   }
 
   /* ── 기타 ──────────────────────────────────────────────── */

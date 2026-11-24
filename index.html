@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Sans+KR:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261124b">
+<link rel="stylesheet" href="styles.css?v=20261124c">
 </head>
 <body>
 
@@ -955,13 +955,13 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<!-- 배경음악: 방문자가 버튼을 눌렀을 때만 재생됩니다 (audio/bgm.mp3) -->
-<audio id="bgmAudio" src="audio/bgm.mp3" loop preload="metadata" playsinline></audio>
+<!-- 배경음악: 페이지에 들어오면 자동 재생을 시도하고, 브라우저가 막으면 첫 터치·클릭에서 시작합니다 (audio/bgm.mp3) -->
+<audio id="bgmAudio" src="audio/bgm.mp3" loop autoplay preload="auto" playsinline></audio>
 <button class="bgm-btn" id="bgmBtn" type="button" aria-pressed="false" aria-label="배경음악 재생">
   <span class="bgm-btn__bars" aria-hidden="true"><i></i><i></i><i></i></span>
   <span class="bgm-btn__label" id="bgmLabel">♪ BGM</span>
 </button>
 
-<script src="app.js?v=20261124b"></script>
+<script src="app.js?v=20261124c"></script>
 </body>
 </html>
