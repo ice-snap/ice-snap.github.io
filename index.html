@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>아이스스냅 ICE SNAP — 아이폰 본식·야외·돌스냅</title>
+<meta name="description" content="아이스스냅은 아이폰으로 본식 스냅, 야외 스냅, 돌스냅을 촬영하는 스냅 스튜디오입니다. 가장 영화 같은 순간을 가장 가깝게.">
+<meta name="theme-color" content="#FAF9F7">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="아이스스냅 ICE SNAP — 아이폰 본식·야외·돌스냅">
+<meta property="og:description" content="본식 · 야외 · 돌스냅. 아이폰 하나로, 그날의 공기까지 담습니다.">
+<meta property="og:url" content="https://ice-snap.github.io/">
+<meta property="og:image" content="https://ice-snap.github.io/images/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="아이스스냅 — 아이폰 본식·야외·돌스냅">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ice-snap.github.io/images/og-cover.jpg">
+<link rel="canonical" href="https://ice-snap.github.io/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Sans+KR:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     ICE SNAP — 아이스스냅 / 아이폰 스냅 스튜디오
+     이 사이트는 index.html · styles.css · app.js · images/ 만으로 동작하는
+     정적 사이트입니다. (GitHub Pages · Vercel · Netlify 어디든 그대로 올리면 됩니다.)
+     수정할 곳은 EDIT 라고 적힌 주석으로 표시해 두었습니다.
+     ═══════════════════════════════════════════════════════════════ -->
+
+<a class="skip" href="#portfolio">포트폴리오로 바로 가기</a>
+
+<!-- ─────────── Header ─────────── -->
+<header class="header" id="header">
+  <a class="brand" href="#top" aria-label="아이스스냅 홈">
+    <svg class="monogram" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+      <circle cx="24" cy="24" r="22.5" fill="none" stroke="currentColor" stroke-width="1"/>
+      <text x="24" y="25.5" text-anchor="middle" dominant-baseline="middle"
+            font-family="Cormorant Garamond, Georgia, serif" font-size="14" letter-spacing="0.6"
+            fill="currentColor">ICE</text>
+    </svg>
+    <span class="brand__word">ICE&nbsp;SNAP</span>
+  </a>
+
+  <nav class="nav" aria-label="주요 메뉴">
+    <a href="#portfolio">Portfolio</a>
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="header__right">
+    <a class="header__cta" href="#contact">촬영 문의</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="drawer">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- 모바일 메뉴 -->
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="메뉴" hidden>
+  <div class="drawer__top">
+    <span class="drawer__brand">ICE SNAP</span>
+    <button class="drawer__close" id="drawerClose" type="button" aria-label="메뉴 닫기">✕</button>
+  </div>
+  <nav class="drawer__nav" aria-label="모바일 메뉴">
+    <a href="#about"><em>01</em>About</a>
+    <a href="#portfolio"><em>02</em>Portfolio</a>
+    <a href="#services"><em>03</em>Services</a>
+    <a href="#process"><em>04</em>Process</a>
+    <a href="#contact"><em>05</em>Contact</a>
+  </nav>
+  <div class="drawer__foot">
+    <a href="https://instagram.com/ice__snap" target="_blank" rel="noopener">@ice__snap</a>
+    <a href="https://instagram.com/ice__snap.studio" target="_blank" rel="noopener">@ice__snap.studio</a>
+    <a href="https://instagram.com/ice__snap.bebe" target="_blank" rel="noopener">@ice__snap.bebe</a>
+  </div>
+</div>
+
+<main>
+
+  <!-- ─────────── Hero ─────────── -->
+  <section class="hero" id="top">
+    <div class="hero__inner">
+
+      <div class="hero__copy">
+        <p class="hero__eyebrow">
+          <span>아이폰 스냅 스튜디오</span>
+          <span>Seoul &amp; Beyond</span>
+        </p>
+
+        <div class="hero__type">
+          <h1 class="hero__title"><span>ICE</span><span class="hero__title--2">SNAP</span></h1>
+          <p class="hero__lede">가장 영화 같은 순간을,<br>가장 가깝게.</p>
+        </div>
+
+        <ul class="hero__tags">
+          <li><span class="en">Wedding</span><span class="kr">본식 스냅</span></li>
+          <li><span class="en">Outdoor</span><span class="kr">야외 스냅</span></li>
+          <li><span class="en">Dol Snap</span><span class="kr">돌스냅</span></li>
+        </ul>
+
+        <div class="hero__cta">
+          <a class="btn btn--dark" href="#portfolio">포트폴리오 보기</a>
+          <a class="btn btn--outline" href="#contact">촬영 문의하기</a>
+        </div>
+
+        <!-- EDIT: 재오픈 상태 문구 — 영업을 다시 시작하면 이 배지를 지우거나 바꾸세요 -->
+        <p class="hero__status">
+          <span class="dot" aria-hidden="true"></span>
+          Reopening Soon · 재오픈 준비 중 — 사전 문의는 언제든 환영합니다
+        </p>
+      </div>
+
+      <figure class="hero__media">
+        <span class="hero__frame">
+          <img src="images/20-ceremony-floating-veil-kiss.jpg" width="1050" height="1400"
+               alt="아치형 예식장에서 베일이 공중으로 흩날리는 가운데 입을 맞추는 신랑 신부" fetchpriority="high">
+        </span>
+        <figcaption>
+          <span class="hero__cap-cat">Ceremony</span>
+          <span class="hero__cap-title">흩날리는 베일</span>
+          <span class="hero__cap-meta">No. 20</span>
+        </figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <!-- 얇은 흐르는 띠 -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>본식 스냅</span><i>·</i><span>야외 스냅</span><i>·</i><span>돌스냅</span><i>·</i>
+      <span>아이폰 스냅</span><i>·</i><span>ICE SNAP</span><i>·</i>
+      <span>본식 스냅</span><i>·</i><span>야외 스냅</span><i>·</i><span>돌스냅</span><i>·</i>
+      <span>아이폰 스냅</span><i>·</i><span>ICE SNAP</span><i>·</i>
+    </div>
+  </div>
+
+  <!-- ─────────── 01 About ─────────── -->
+  <section class="section about" id="about">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="section__num">01</span>
+        <span class="section__label">About</span>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__statement reveal">
+          <h2>아이폰으로 찍는 사진은,<br>조금 더 가깝습니다.</h2>
+        </div>
+
+        <div class="about__body reveal">
+          <p class="about__lead">
+            아이스스냅은 아이폰 하나로 결혼식과 야외에서의 순간을 담는 스냅 스튜디오입니다.
+            큰 장비 대신 손안의 카메라를 들고, 두 사람의 눈높이에서, 조금 물러나 있는 대신 오래 바라봅니다.
+          </p>
+          <p>
+            준비된 포즈보다 저절로 나오는 표정을, 완벽한 빛보다 그날의 공기를 찍습니다.
+            몇 년 뒤에 열어봐도 그날의 소리가 들리는 사진. 그게 아이스스냅이 생각하는 좋은 스냅입니다.
+          </p>
+
+          <ul class="about__facts">
+            <li><span>Shooting</span>본식 · 야외 · 돌스냅</li>
+            <li><span>Camera</span>iPhone</li>
+            <li><span>Mood</span>자연스러운 시선, 부담 없는 거리감</li>
+          </ul>
+
+          <p class="badge">
+            <span class="dot" aria-hidden="true"></span>
+            Reopening Soon · 재오픈 준비 중 · 사전 상담 가능
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── Ceremony band ─────────── -->
+  <section class="band" id="ceremony">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="section__num">—</span>
+        <span class="section__label">Ceremony</span>
+      </div>
+
+      <div class="band__intro reveal">
+        <h2>빛이 가장 좋은 시간</h2>
+        <p>
+          샹들리에와 촛불, 하객들의 휴대폰 플래시가 만들어내는 어두운 예식장의 빛.
+          아이폰은 그 빛 속에서도 조용히, 그리고 꽤 강하게 찍습니다.
+        </p>
+      </div>
+
+      <div class="band__grid">
+        <figure class="band__item reveal">
+          <img src="images/27-ceremony-petal-shower-kiss.jpg" width="1050" height="1400" loading="lazy"
+               alt="샹들리에 아래 드레스로 꽃잎이 쏟아지는 가운데 입을 맞추는 두 사람">
+          <figcaption>꽃잎이 쏟아지는 순간</figcaption>
+        </figure>
+        <figure class="band__item reveal">
+          <img src="images/15-ceremony-flower-arch-laugh.jpg" width="1050" height="1400" loading="lazy"
+               alt="꽃 아치 아래에서 웃는 신부와 귓가에 속삭이는 신랑">
+          <figcaption>꽃 아치 아래에서</figcaption>
+        </figure>
+        <figure class="band__item reveal">
+          <img src="images/28-ceremony-groom-mother-embrace.jpg" width="1050" height="1400" loading="lazy"
+               alt="한복을 입은 어머니를 안고 웃음과 눈물을 함께 짓는 신랑">
+          <figcaption>어머니의 품</figcaption>
+        </figure>
+        <figure class="band__item reveal">
+          <img src="images/12-ceremony-veil-phone-lights.jpg" width="1012" height="1349" loading="lazy"
+               alt="샹들리에 아래에서 하객들의 휴대폰 조명을 받으며 입을 맞추는 두 사람">
+          <figcaption>휴대폰 불빛 속에서</figcaption>
+        </figure>
+      </div>
+
+      <p class="band__note reveal">식전 신부대기실부터 본식, 원판·퇴장까지 — 하객의 시선에 끼어들지 않는 거리에서 담습니다.</p>
+    </div>
+  </section>
+
+  <!-- ─────────── 02 Portfolio ─────────── -->
+  <section class="section portfolio" id="portfolio">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="section__num">02</span>
+        <span class="section__label">Portfolio</span>
+      </div>
+
+      <div class="portfolio__top reveal">
+        <h2>Selected Moments</h2>
+        <p class="portfolio__count"><span id="countAll">53</span> frames · 2025</p>
+      </div>
+
+      <div class="filters reveal" role="tablist" aria-label="포트폴리오 분류">
+        <button class="filter is-active" type="button" data-filter="all" role="tab" aria-selected="true">All <span>53</span></button>
+        <button class="filter" type="button" data-filter="ceremony" role="tab" aria-selected="false">Ceremony <span>17</span></button>
+        <button class="filter" type="button" data-filter="outdoor" role="tab" aria-selected="false">Outdoor <span>5</span></button>
+        <button class="filter" type="button" data-filter="editorial" role="tab" aria-selected="false">Editorial <span>11</span></button>
+        <button class="filter" type="button" data-filter="dol" role="tab" aria-selected="false">Dol <span>20</span></button>
+      </div>
+
+      <!-- 갤러리: 사진 순서 · 캡션은 여기서 바꿀 수 있습니다.
+           data-cat = ceremony | outdoor | editorial | dol -->
+      <div class="gallery" id="gallery">
+
+        <figure class="shot" data-cat="ceremony">
+          <button class="shot__btn" type="button">
+            <img src="images/20-ceremony-floating-veil-kiss.jpg" width="1050" height="1400" loading="lazy" alt="아치형 예식장에서 베일이 공중으로 흩날리는 가운데 입을 맞추는 두 사람">
+          </button>
+          <figcaption><span class="shot__cat">Ceremony</span>흩날리는 베일</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="outdoor">
+          <button class="shot__btn" type="button">
+            <img src="images/01-outdoor-dusk-beach-dance.jpg" width="1012" height="1349" loading="lazy" alt="해질녘 바닷가에서 왈츠를 추는 신랑 신부 실루엣">
+          </button>
+          <figcaption><span class="shot__cat">Outdoor</span>바닷가의 왈츠</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="ceremony">
+          <button class="shot__btn" type="button">
+            <img src="images/27-ceremony-petal-shower-kiss.jpg" width="1050" height="1400" loading="lazy" alt="샹들리에 아래 드레스로 꽃잎이 쏟아지는 가운데 입을 맞추는 두 사람">
+          </button>
+          <figcaption><span class="shot__cat">Ceremony</span>꽃잎이 쏟아지는</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="editorial">
+          <button class="shot__btn" type="button">
+            <img src="images/02-editorial-glass-elevator.jpg" width="1012" height="1349" loading="lazy" alt="유리 엘리베이터 안에서 입을 맞추는 두 사람의 실루엣">
+          </button>
+          <figcaption><span class="shot__cat">Editorial</span>유리 상자 안</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="outdoor">
+          <button class="shot__btn" type="button">
+            <img src="images/03-outdoor-meadow-bouquet.jpg" width="1012" height="1349" loading="lazy" alt="햇살 좋은 풀밭에 앉아 꽃다발을 든 신랑 신부">
+          </button>
+          <figcaption><span class="shot__cat">Outdoor</span>풀밭의 오후</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="ceremony">
+          <button class="shot__btn" type="button">
+            <img src="images/14-ceremony-spotlight-tear.jpg" width="1012" height="1349" loading="lazy" alt="스포트라이트를 받으며 눈물을 닦는 신부와 흰 난 꽃다발">
+          </button>
+          <figcaption><span class="shot__cat">Ceremony</span>눈물과 스포트라이트</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="editorial">
+          <button class="shot__btn" type="button">
+            <img src="images/33-editorial-escalator-reach.jpg" width="1012" height="1349" loading="lazy" alt="에스컬레이터를 타고 내려가는 신부를 올려다보는 신랑">
+          </button>
+          <figcaption><span class="shot__cat">Editorial</span>에스컬레이터</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="outdoor">
+          <button class="shot__btn" type="button">
+            <img src="images/17-outdoor-pampas-meadow.jpg" width="1012" height="1349" loading="lazy" alt="억새가 가득한 들판을 손잡고 걸어가는 두 사람">
+          </button>
+          <figcaption><span class="shot__cat">Outdoor</span>억새 들판</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="ceremony">
+          <button class="shot__btn" type="button">
+            <img src="images/28-ceremony-groom-mother-embrace.jpg" width="1050" height="1400" loading="lazy" alt="한복을 입은 어머니를 안고 웃음과 눈물을 함께 짓는 신랑">
+          </button>
+          <figcaption><span class="shot__cat">Ceremony</span>어머니의 품</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="editorial">
+          <button class="shot__btn" type="button">
+            <img src="images/09-editorial-stonewall-proposal.jpg" width="1012" height="1349" loading="lazy" alt="돌담 앞에서 무릎을 꿇고 꽃다발을 건네는 신랑">
+          </button>
+          <figcaption><span class="shot__cat">Editorial</span>꽃다발을 건네며</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="outdoor">
+          <button class="shot__btn" type="button">
+            <img src="images/11-outdoor-green-hill-walk.jpg" width="1012" height="1349" loading="lazy" alt="푸른 하늘과 언덕을 걸어가는 신부와 신랑의 뒷모습">
+          </button>
+          <figcaption><span class="shot__cat">Outdoor</span>걸어가는 두 사람</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="ceremony">
+          <button class="shot__btn" type="button">
+            <img src="images/13-ceremony-grand-chandelier.jpg" width="1012" height="1349" loading="lazy" alt="대형 샹들리에가 걸린 예식장에서 브이를 그리는 신랑 신부">
+          </button>
+          <figcaption><span class="shot__cat">Ceremony</span>예식장의 샹들리에</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="outdoor">
+          <button class="shot__btn" type="button">
+            <img src="images/05-outdoor-beach-embrace.jpg" width="1012" height="1349" loading="lazy" alt="해질녘 바닷가에서 꽃다발을 든 채 껴안은 두 사람">
+          </button>
+          <figcaption><span class="shot__cat">Outdoor</span>바다가 남긴 빛</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="ceremony">
+          <button class="shot__btn" type="button">
+            <img src="images/19-ceremony-crystal-dress-aisle.jpg" width="1050" height="1400" loading="lazy" alt="크리스털 장식 드레스를 입고 팔짱을 끼고 버진로드를 걷는 두 사람">
+          </button>
+          <figcaption><span class="shot__cat">Ceremony</span>버진로드</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="editorial">
+          <button class="shot__btn" type="button">
+            <img src="images/08-editorial-harley-couple.jpg" width="1012" height="1349" loading="lazy" alt="선글라스를 쓴 신랑 신부의 스트리트 화보">
+          </button>
+          <figcaption><span class="shot__cat">Editorial</span>선글라스</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="ceremony">
+          <button class="shot__btn" type="button">
+            <img src="images/30-ceremony-aisle-phone-lights-smile.jpg" width="1050" height="1400" loading="lazy" alt="하객들의 휴대폰 불빛을 받으며 웃는 신부의 입장">
+          </button>
+          <figcaption><span class="shot__cat">Ceremony</span>입장</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="editorial">
+          <button class="shot__btn" type="button">
+            <img src="images/16-editorial-wooden-door.jpg" width="1012" height="1349" loading="lazy" alt="나무 문 앞에 선 미니 드레스 신부와 신랑">
+          </button>
+          <figcaption><span class="shot__cat">Editorial</span>나무 문 앞에서</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="ceremony">
+          <button class="shot__btn" type="button">
+            <img src="images/31-ceremony-aisle-laugh-confetti.jpg" width="1050" height="1400" loading="lazy" alt="꽃잎 세례를 맞으며 크리스털 드레스로 크게 웃는 신부와 박수치는 신랑">
+          </button>
+          <figcaption><span class="shot__cat">Ceremony</span>박수와 꽃잎</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="editorial">
+          <button class="shot__btn" type="button">
+            <img src="images/06-editorial-night-overpass.jpg" width="1012" height="1349" loading="lazy" alt="밤의 도시 고가도로에서 찍은 필름 그레인 인물 사진">
+          </button>
+          <figcaption><span class="shot__cat">Editorial</span>도시의 밤</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="ceremony">
+          <button class="shot__btn" type="button">
+            <img src="images/18-ceremony-waiting-room-rose.jpg" width="1050" height="1400" loading="lazy" alt="꽃으로 가득한 신부대기실에서 장미 꽃다발의 향을 맡는 신부">
+          </button>
+          <figcaption><span class="shot__cat">Ceremony</span>신부대기실</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="editorial">
+          <button class="shot__btn" type="button">
+            <img src="images/04-editorial-vintage-garage.jpg" width="1012" height="1349" loading="lazy" alt="빈티지한 작업실 공간에 앉은 신랑 신부">
+          </button>
+          <figcaption><span class="shot__cat">Editorial</span>오래된 공간</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="ceremony">
+          <button class="shot__btn" type="button">
+            <img src="images/22-ceremony-arch-chandelier-flowers.jpg" width="1050" height="1400" loading="lazy" alt="아치와 샹들리에를 배경으로 흰 꽃 앞에 선 신랑 신부">
+          </button>
+          <figcaption><span class="shot__cat">Ceremony</span>아치와 촛불</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="editorial">
+          <button class="shot__btn" type="button">
+            <img src="images/10-editorial-stonewall-black-blazer.jpg" width="1012" height="1349" loading="lazy" alt="돌담 앞에서 검은 재킷을 걸친 신부와 신랑">
+          </button>
+          <figcaption><span class="shot__cat">Editorial</span>검은 재킷</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="ceremony">
+          <button class="shot__btn" type="button">
+            <img src="images/26-ceremony-candle-officiant.jpg" width="1023" height="1400" loading="lazy" alt="촛불이 켜진 예식장에서 주례를 마주 보고 선 신랑 신부">
+          </button>
+          <figcaption><span class="shot__cat">Ceremony</span>촛불 앞에서</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="editorial">
+          <button class="shot__btn" type="button">
+            <img src="images/07-editorial-harley-groom.jpg" width="1012" height="1349" loading="lazy" alt="할리데이비슨 매장 앞에 앉은 신랑">
+          </button>
+          <figcaption><span class="shot__cat">Editorial</span>거리 위의 신랑</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="ceremony">
+          <button class="shot__btn" type="button">
+            <img src="images/32-ceremony-waiting-room-florals.jpg" width="1050" height="1400" loading="lazy" alt="흰 꽃과 파스텔 꽃이 가득한 신부대기실에 앉은 신부">
+          </button>
+          <figcaption><span class="shot__cat">Ceremony</span>꽃에 둘러싸여</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="editorial">
+          <button class="shot__btn" type="button">
+            <img src="images/23-editorial-veil-light-detail.jpg" width="1050" height="1400" loading="lazy" alt="햇살을 받은 드레스와 베일의 디테일">
+          </button>
+          <figcaption><span class="shot__cat">Editorial</span>빛을 머금은 베일</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="ceremony">
+          <button class="shot__btn" type="button">
+            <img src="images/21-ceremony-phone-lights-profile.jpg" width="1049" height="1400" loading="lazy" alt="하객들의 휴대폰 조명 사이로 보이는 신부와 신랑의 옆모습">
+          </button>
+          <figcaption><span class="shot__cat">Ceremony</span>하객들의 불빛</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="editorial">
+          <button class="shot__btn" type="button">
+            <img src="images/29-editorial-rings-invitation-flatlay.jpg" width="1050" height="1400" loading="lazy" alt="월넛 반지함과 청첩장, 흰 난으로 연출한 플랫레이">
+          </button>
+          <figcaption><span class="shot__cat">Editorial</span>반지함과 청첩장</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="ceremony">
+          <button class="shot__btn" type="button">
+            <img src="images/15-ceremony-flower-arch-laugh.jpg" width="1050" height="1400" loading="lazy" alt="꽃 아치 아래에서 웃는 신부와 귓가에 속삭이는 신랑">
+          </button>
+          <figcaption><span class="shot__cat">Ceremony</span>꽃 아치 아래</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="ceremony">
+          <button class="shot__btn" type="button">
+            <img src="images/25-ceremony-hall-silhouette-spotlight.jpg" width="1050" height="1400" loading="lazy" alt="샹들리에가 걸린 예식장을 등지고 선 두 사람의 실루엣">
+          </button>
+          <figcaption><span class="shot__cat">Ceremony</span>예식장의 뒤에서</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="ceremony">
+          <button class="shot__btn" type="button">
+            <img src="images/24-ceremony-satin-dress-pearl-bouquet.jpg" width="1050" height="1400" loading="lazy" alt="오프숄더 새틴 드레스와 진주 장식 장미 꽃다발">
+          </button>
+          <figcaption><span class="shot__cat">Ceremony</span>새틴 드레스</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="ceremony">
+          <button class="shot__btn" type="button">
+            <img src="images/12-ceremony-veil-phone-lights.jpg" width="1012" height="1349" loading="lazy" alt="샹들리에 아래에서 하객들의 휴대폰 조명을 받으며 입을 맞추는 두 사람">
+          </button>
+          <figcaption><span class="shot__cat">Ceremony</span>휴대폰 불빛 속에서</figcaption>
+        </figure>
+
+        <!-- ── Dol Snap (12) ── -->
+        <figure class="shot" data-cat="dol">
+          <button class="shot__btn" type="button">
+            <img src="images/34-dol-bonnet-portrait.jpg" width="1050" height="1400" loading="lazy" alt="아이보리 실크 보넷과 드레스를 입고 고개를 살짝 숙인 아기">
+          </button>
+          <figcaption><span class="shot__cat">Dol</span>실크 보넷</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="dol">
+          <button class="shot__btn" type="button">
+            <img src="images/43-dol-mom-cheek-kiss.jpg" width="1050" height="1400" loading="lazy" alt="돌반지를 낀 아기의 볼에 입을 맞추는 엄마">
+          </button>
+          <figcaption><span class="shot__cat">Dol</span>엄마의 입맞춤</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="dol">
+          <button class="shot__btn" type="button">
+            <img src="images/40-dol-first-steps.jpg" width="1080" height="1350" loading="lazy" alt="엄마 아빠의 손을 잡고 한 걸음씩 내딛는 아기">
+          </button>
+          <figcaption><span class="shot__cat">Dol</span>첫걸음</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="dol">
+          <button class="shot__btn" type="button">
+            <img src="images/42-dol-babies-cheek-touch.jpg" width="1080" height="1350" loading="lazy" alt="아기 동생의 볼을 조심스레 만져보는 작은 손">
+          </button>
+          <figcaption><span class="shot__cat">Dol</span>조심스레 닿은 손</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="dol">
+          <button class="shot__btn" type="button">
+            <img src="images/39-dol-little-hands.jpg" width="1080" height="1350" loading="lazy" alt="서로 작은 손을 꼭 마주 잡은 아기들">
+          </button>
+          <figcaption><span class="shot__cat">Dol</span>작은 두 손</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="dol">
+          <button class="shot__btn" type="button">
+            <img src="images/38-dol-grandpa-embrace.jpg" width="1050" height="1400" loading="lazy" alt="할아버지 품에 안겨 장난감 전화기를 쥔 아기">
+          </button>
+          <figcaption><span class="shot__cat">Dol</span>할아버지의 품</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="dol">
+          <button class="shot__btn" type="button">
+            <img src="images/44-dol-lace-dress-walking.jpg" width="1050" height="1400" loading="lazy" alt="레이스 드레스를 입고 손을 잡은 채 아장아장 걷는 모습">
+          </button>
+          <figcaption><span class="shot__cat">Dol</span>아장아장</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="dol">
+          <button class="shot__btn" type="button">
+            <img src="images/37-dol-gold-ring-ribbon.jpg" width="1050" height="1400" loading="lazy" alt="돌반지와 오방색 실 목걸이를 건 하얀 드레스의 아기">
+          </button>
+          <figcaption><span class="shot__cat">Dol</span>오방색 실과 돌반지</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="dol">
+          <button class="shot__btn" type="button">
+            <img src="images/36-dol-sleeping-bonnet.jpg" width="1050" height="1400" loading="lazy" alt="보넷을 쓴 채 새근새근 낮잠에 든 아기">
+          </button>
+          <figcaption><span class="shot__cat">Dol</span>잠든 순간</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="dol">
+          <button class="shot__btn" type="button">
+            <img src="images/35-dol-table-frames.jpg" width="1050" height="1400" loading="lazy" alt="꽃과 촛불, 한복 사진 액자로 꾸며진 따뜻한 돌잔치 포토테이블">
+          </button>
+          <figcaption><span class="shot__cat">Dol</span>포토테이블</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="dol">
+          <button class="shot__btn" type="button">
+            <img src="images/41-dol-jabi-items.jpg" width="1080" height="1350" loading="lazy" alt="린넨 보자기 위에 정갈하게 놓인 나무 돌잡이 용품">
+          </button>
+          <figcaption><span class="shot__cat">Dol</span>돌잡이</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="dol">
+          <button class="shot__btn" type="button">
+            <img src="images/45-dol-arch-table-cake.jpg" width="1080" height="1350" loading="lazy" alt="첫돌 케이크와 아치 배경 앞에 선 아기">
+          </button>
+          <figcaption><span class="shot__cat">Dol</span>첫돌의 주인공</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="dol">
+          <button class="shot__btn" type="button">
+            <img src="images/46-dol-twins-bubbles-grass.jpg" width="1080" height="1350" loading="lazy" alt="야외 잔디 위에서 비눗방울을 바라보며 나란히 앉은 쌍둥이 아기들">
+          </button>
+          <figcaption><span class="shot__cat">Dol</span>비눗방울과 잔디</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="dol">
+          <button class="shot__btn" type="button">
+            <img src="images/47-dol-twins-family-outdoor.jpg" width="1080" height="1350" loading="lazy" alt="야외 정원에서 쌍둥이 아기를 한 명씩 품에 안고 마주 웃는 엄마와 아빠">
+          </button>
+          <figcaption><span class="shot__cat">Dol</span>정원의 네 식구</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="dol">
+          <button class="shot__btn" type="button">
+            <img src="images/48-dol-mom-baby-sunlight.jpg" width="1080" height="1350" loading="lazy" alt="따스한 햇살 아래 보넷을 쓴 아기를 다정하게 바라보는 엄마">
+          </button>
+          <figcaption><span class="shot__cat">Dol</span>햇살 아래에서</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="dol">
+          <button class="shot__btn" type="button">
+            <img src="images/49-dol-hallway-first-steps.jpg" width="1080" height="1350" loading="lazy" alt="복도에서 엄마 아빠의 손을 양쪽으로 잡고 발을 내딛는 아기">
+          </button>
+          <figcaption><span class="shot__cat">Dol</span>함께 걷는 걸음</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="dol">
+          <button class="shot__btn" type="button">
+            <img src="images/50-dol-family-bench-portrait.jpg" width="1080" height="1350" loading="lazy" alt="원목 벤치에 나란히 앉아 아기를 안고 미소 짓는 세 식구">
+          </button>
+          <figcaption><span class="shot__cat">Dol</span>세 식구의 초상</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="dol">
+          <button class="shot__btn" type="button">
+            <img src="images/51-dol-bubbles-wooden-chair.jpg" width="1080" height="1350" loading="lazy" alt="비눗방울이 떠다니는 가운데 나무 의자를 짚고 서 있는 아기">
+          </button>
+          <figcaption><span class="shot__cat">Dol</span>비눗방울 사이로</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="dol">
+          <button class="shot__btn" type="button">
+            <img src="images/52-dol-parents-phototable.jpg" width="1050" height="1400" loading="lazy" alt="포토테이블 앞의 액자를 아기와 함께 내려다보는 엄마와 아빠">
+          </button>
+          <figcaption><span class="shot__cat">Dol</span>포토테이블 앞에서</figcaption>
+        </figure>
+
+        <figure class="shot" data-cat="dol">
+          <button class="shot__btn" type="button">
+            <img src="images/53-dol-lace-bonnet-portrait.jpg" width="1050" height="1400" loading="lazy" alt="레이스 보넷과 드레스를 입고 품에 안겨 먼 곳을 바라보는 아기">
+          </button>
+          <figcaption><span class="shot__cat">Dol</span>레이스 보넷</figcaption>
+        </figure>
+
+      </div>
+
+      <p class="portfolio__note">
+        본식 · 야외 · 스튜디오 · 돌스냅 촬영본 중 일부입니다. 모든 사진은 아이폰으로 촬영했고, 보정 후에도 그날의 빛과 공기를 남겨두었습니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- ─────────── 03 Services ─────────── -->
+  <section class="section services" id="services">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="section__num">03</span>
+        <span class="section__label">Services</span>
+      </div>
+
+      <div class="services__intro reveal">
+        <h2>세 가지 촬영</h2>
+        <p>결혼식장에서, 바깥에서, 그리고 아기의 첫 생일에서. 같은 아이폰, 같은 시선으로 담습니다.</p>
+      </div>
+
+      <!-- EDIT: 금액 · 시간 · 컷수 등 확정된 내용이 생기면 각 카드의 .card__meta 에 채워 넣으세요 -->
+      <div class="cards">
+        <article class="card reveal">
+          <span class="card__num">01</span>
+          <h3 class="card__title">Wedding Snap<span>본식 스냅</span></h3>
+          <p class="card__desc">
+            예식 전 신부대기실부터 본식, 원판 촬영과 퇴장까지.
+            하객의 시선에 끼어들지 않는 거리에서 그날의 표정과 분위기를 담습니다.
+          </p>
+          <ul class="card__list">
+            <li>신부대기실 · 본식 · 원판 · 퇴장</li>
+            <li>당일 현장 무빙 촬영</li>
+            <li>하객 · 가족 스냅 포함</li>
+          </ul>
+          <div class="card__foot">
+            <p class="card__meta">금액 · 촬영 시간 · 컷수 — 재오픈 시 최종 안내</p>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__num">02</span>
+          <h3 class="card__title">Outdoor Snap<span>야외 스냅</span></h3>
+          <p class="card__desc">
+            바닷가, 들판, 억새밭, 골목. 빛과 계절이 가장 좋은 시간에 맞춰
+            두 사람의 이야기를 천천히 찍습니다. 본식과 함께, 또는 따로.
+          </p>
+          <ul class="card__list">
+            <li>해변 · 들판 · 억새 · 골목</li>
+            <li>장소 추천과 동선 안내</li>
+            <li>본식 전후 · 기념일 촬영 가능</li>
+          </ul>
+          <div class="card__foot">
+            <p class="card__meta">금액 · 이동 범위 · 촬영 시간 — 재오픈 시 최종 안내</p>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__num">03</span>
+          <h3 class="card__title">Dol Snap<span>돌스냅</span></h3>
+          <p class="card__desc">
+            돌잔치의 아기와 가족, 돌상과 돌잡이 순간.
+            엄마 아빠가 기억하고 싶은 그 장면을, 최대한 방해하지 않고 담습니다.
+          </p>
+          <ul class="card__list">
+            <li>돌잔치 전 구간 · 가족 스냅</li>
+            <li>돌상 · 돌잡이 순간</li>
+            <li>아기의 리듬에 맞춘 촬영</li>
+          </ul>
+          <p class="card__aside">
+            더 많은 돌스냅 기록과 예약 소식은 전용 계정
+            <a href="https://instagram.com/ice__snap.bebe" target="_blank" rel="noopener">@ice__snap.bebe</a>에서 확인하실 수 있어요.
+          </p>
+          <div class="card__foot">
+            <p class="card__meta">금액 · 컷수 — 재오픈 시 최종 안내</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="services__note reveal">
+        모든 일정과 비용은 상담 후 확정됩니다. 아직 공개되지 않은 금액·컷수·보정 일정은 재오픈 시 안내드립니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- ─────────── 04 Process ─────────── -->
+  <section class="section process" id="process">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="section__num">04</span>
+        <span class="section__label">Process</span>
+      </div>
+
+      <div class="process__intro reveal">
+        <h2>진행 순서</h2>
+      </div>
+
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step__num">01</span>
+          <h3>문의</h3>
+          <p>인스타그램 DM으로 희망 날짜와 장소, 촬영 종류를 알려주세요. 아래 문의 양식을 쓰면 문장이 자동으로 만들어집니다.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">02</span>
+          <h3>상담 · 일정 확정</h3>
+          <p>가능한 일정과 진행 방식을 안내드리고, 예약금 안내 후 일정을 확정합니다.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">03</span>
+          <h3>촬영</h3>
+          <p>예식장이나 약속한 장소에서, 가능한 한 자연스럽게. 포즈보다 대화를 먼저 합니다.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">04</span>
+          <h3>전달</h3>
+          <p>촬영본을 정리해 전달드립니다. 보정 컷수와 전달 일정은 재오픈 시 정확히 안내드립니다.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ─────────── 05 FAQ ─────────── -->
+  <section class="section faq" id="faq">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="section__num">05</span>
+        <span class="section__label">FAQ</span>
+      </div>
+
+      <div class="faq__grid">
+        <div class="faq__title reveal"><h2>자주 묻는 것들</h2></div>
+
+        <div class="faq__list reveal">
+          <details class="qa">
+            <summary><span>예약은 어떻게 하나요?</span></summary>
+            <div class="qa__body">
+              <p>인스타그램 <a href="https://instagram.com/ice__snap" target="_blank" rel="noopener">@ice__snap</a> DM으로 문의 주시면 됩니다.
+              희망 날짜와 예식장(또는 장소), 촬영 종류를 함께 알려주시면 더 빠르게 답장드릴 수 있어요.</p>
+            </div>
+          </details>
+
+          <details class="qa">
+            <summary><span>어떤 장비로 찍나요?</span></summary>
+            <div class="qa__body">
+              <p>아이폰 한 대로 촬영합니다. 큰 조명과 장비를 세우지 않기 때문에 예식의 흐름을 방해하지 않고,
+              하객들 사이에서도 자연스럽게 이동할 수 있습니다. 현장에 따라 작은 보조 조명을 사용하기도 합니다.</p>
+            </div>
+          </details>
+
+          <details class="qa">
+            <summary><span>원본과 보정본은 어떻게 받나요?</span></summary>
+            <div class="qa__body">
+              <p>촬영본은 정리 후 전달드리며, 보정 컷수와 전달 방식·일정은 재오픈 시 확정해서 안내드립니다.
+              정확한 조건은 상담 시 말씀드리겠습니다.</p>
+            </div>
+          </details>
+
+          <details class="qa">
+            <summary><span>본식 때 스튜디오·영상팀과 겹쳐도 괜찮나요?</span></summary>
+            <div class="qa__body">
+              <p>괜찮습니다. 정해진 자리에서만 움직이고, 다른 업체의 촬영을 가리지 않도록 조율합니다.
+              가능하면 예식 전에 담당자분께 미리 인사드립니다.</p>
+            </div>
+          </details>
+
+          <details class="qa">
+            <summary><span>야외 스냅 장소는 어떻게 정하나요?</span></summary>
+            <div class="qa__body">
+              <p>원하시는 장소가 있으면 그곳에서, 없으면 계절과 시간대에 맞춰 몇 곳을 추천드립니다.
+              이동 시간과 빛의 방향까지 고려해서 동선을 잡습니다.</p>
+            </div>
+          </details>
+
+          <details class="qa">
+            <summary><span>돌스냅도 하나요?</span></summary>
+            <div class="qa__body">
+              <p>네, 진행합니다. 위 포트폴리오의 <strong>Dol</strong> 탭에서 실제 돌스냅 촬영본을 보실 수 있고,
+              더 많은 돌스냅 사진과 문의 안내는 전용 계정 <a href="https://instagram.com/ice__snap.bebe" target="_blank" rel="noopener">@ice__snap.bebe</a>에서 확인하실 수 있습니다.</p>
+            </div>
+          </details>
+
+          <details class="qa">
+            <summary><span>지금 예약할 수 있나요?</span></summary>
+            <div class="qa__body">
+              <p>현재는 재오픈을 준비하며 잠시 쉬어가는 중입니다. 재오픈 일정과 예약 오픈은 인스타그램에서 가장 먼저 안내드립니다.
+              미리 문의를 남겨주시면 오픈 시 순서대로 연락드리겠습니다.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── 06 Contact ─────────── -->
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="section__num">06</span>
+        <span class="section__label">Contact</span>
+      </div>
+
+      <div class="contact__grid">
+        <div class="contact__left reveal">
+          <h2>촬영 문의</h2>
+          <p class="contact__lead">
+            아래 내용을 채우면 문의 문장이 자동으로 만들어집니다.
+            복사해서 인스타그램 DM으로 보내주세요. 확인하는 대로 답장드립니다.
+          </p>
+
+          <ul class="contact__links">
+            <li>
+              <span>Wedding · Main</span>
+              <a href="https://instagram.com/ice__snap" target="_blank" rel="noopener">@ice__snap</a>
+            </li>
+            <li>
+              <span>Studio · Outdoor sub</span>
+              <a href="https://instagram.com/ice__snap.studio" target="_blank" rel="noopener">@ice__snap.studio</a>
+            </li>
+            <li>
+              <span>Dol Snap · 돌스냅</span>
+              <a href="https://instagram.com/ice__snap.bebe" target="_blank" rel="noopener">@ice__snap.bebe</a>
+            </li>
+          </ul>
+
+          <p class="contact__meta">Reopening Soon · 재오픈 준비 중 — 사전 문의 환영</p>
+        </div>
+
+        <form class="form reveal" id="inquiryForm" novalidate>
+          <div class="field">
+            <label for="f-name">성함</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" placeholder="홍길동">
+          </div>
+
+          <div class="field">
+            <label for="f-type">촬영 구분</label>
+            <select id="f-type" name="type">
+              <option value="본식 스냅">본식 스냅</option>
+              <option value="야외 스냅">야외 스냅</option>
+              <option value="돌스냅">돌스냅</option>
+              <option value="본식 + 야외 스냅">본식 + 야외 스냅</option>
+              <option value="기념일 · 그 외">기념일 · 그 외</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="f-date">희망 일시</label>
+            <input id="f-date" name="date" type="date">
+          </div>
+
+          <div class="field">
+            <label for="f-place">예식장 · 장소</label>
+            <input id="f-place" name="place" type="text" placeholder="예) 아모르하우스, 또는 미정">
+          </div>
+
+          <div class="field field--full">
+            <label for="f-note">참고사항</label>
+            <textarea id="f-note" name="note" rows="3" placeholder="예) 하객 200명, 신부대기실부터 퇴장까지 희망"></textarea>
+          </div>
+
+          <div class="preview field--full">
+            <div class="preview__head">
+              <span>문의 문장 미리보기</span>
+              <button class="linkbtn" id="copyOnly" type="button">문장만 복사</button>
+            </div>
+            <pre class="preview__body" id="previewBody"></pre>
+          </div>
+
+          <div class="form__actions field--full">
+            <button class="btn btn--dark" id="copyAndOpen" type="submit">문의 내용 복사하고 DM 보내기</button>
+            <a class="btn btn--outline" id="dmLink" href="https://ig.me/m/ice__snap" target="_blank" rel="noopener">@ice__snap DM 열기</a>
+          </div>
+
+          <p class="form__note field--full">
+            문의 내용은 어디에도 저장되지 않습니다. 복사한 문장을 DM에 붙여넣기만 하면 됩니다.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ─────────── Footer ─────────── -->
+<footer class="footer">
+  <div class="wrap footer__wrap">
+    <div class="footer__brand">
+      <svg class="monogram monogram--lg" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+        <circle cx="24" cy="24" r="22.5" fill="none" stroke="currentColor" stroke-width="1"/>
+        <text x="24" y="25.5" text-anchor="middle" dominant-baseline="middle"
+              font-family="Cormorant Garamond, Georgia, serif" font-size="14" letter-spacing="0.6"
+              fill="currentColor">ICE</text>
+      </svg>
+      <p class="footer__word">ICE SNAP</p>
+      <p class="footer__tag">아이폰 스냅 스튜디오 · 본식 · 야외 · 돌스냅</p>
+    </div>
+
+    <div class="footer__cols">
+      <div>
+        <p class="footer__label">Contact</p>
+        <a href="https://instagram.com/ice__snap" target="_blank" rel="noopener">@ice__snap</a>
+        <a href="https://instagram.com/ice__snap.studio" target="_blank" rel="noopener">@ice__snap.studio</a>
+        <a href="https://instagram.com/ice__snap.bebe" target="_blank" rel="noopener">@ice__snap.bebe</a>
+      </div>
+      <div>
+        <p class="footer__label">Menu</p>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© <span id="year">2026</span> ICE SNAP. All rights reserved.</p>
+      <p>모든 사진은 아이스스냅이 직접 촬영한 실제 촬영본입니다.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ─────────── Lightbox ─────────── -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="사진 크게 보기" hidden>
+  <div class="lightbox__bar">
+    <span class="lightbox__counter" id="lbCounter">1 / 33</span>
+    <button class="lightbox__close" id="lbClose" type="button" aria-label="닫기">✕</button>
+  </div>
+  <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" type="button" aria-label="이전 사진">‹</button>
+  <figure class="lightbox__figure">
+    <img id="lbImg" alt="">
+    <figcaption id="lbCap"></figcaption>
+  </figure>
+  <button class="lightbox__nav lightbox__nav--next" id="lbNext" type="button" aria-label="다음 사진">›</button>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
