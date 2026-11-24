@@ -16,9 +16,9 @@
 ice-snap-site/
 ├── index.html              전체 페이지 (모든 문구는 여기서 수정)
 ├── styles.css              디자인 (색 · 타이포 · 간격)
-├── app.js                  메뉴 · 필터 · 라이트박스 · 문의 문장 생성
-├── favicon.svg
-└── images/                 실제 촬영본 53장 (본식 17 · 야외 5 · 에디토리얼 11 · 돌스냅 20, 긴 변 1400px JPEG q84) + og-cover.jpg
+├── app.js                  메뉴 · 필터 · 라이트박스 · 문의 문장 생성 · 카톡 오픈채팅 연결
+├── favicon.svg / favicon.png  브라우저 탭 아이콘 (ICE 모노그램)
+├── images/                 실제 촬영본 53장 (본식 17 · 야외 5 · 에디토리얼 11 · 돌스냅 20, 긴 변 1400px JPEG q84) + og-cover.jpg + ice-logo.png (로고, 투명 배경)
 ```
 
 ## 로컬에서 보기
@@ -43,7 +43,9 @@ ice-snap-site/
 | 포트폴리오 사진 순서 · 캡션 · 분류 | `#gallery` 안의 `.shot` (`data-cat="ceremony｜outdoor｜editorial"`) |
 | 필터 개수 표시 | `.filter` 버튼 안 숫자, 히어로 아래 `#countAll` |
 | 인스타그램 주소 | 헤더 · Contact · Footer 의 `instagram.com/ice__snap`, `ice__snap.studio`, `ice__snap.bebe` |
+| 카카오톡 오픈채팅 링크 | 드로어 · Process 01 · FAQ · Contact 링크 · 문의 폼 버튼 · Footer 의 `https://open.kakao.com/o/syJFXEwg` (링크가 바뀌면 `app.js` 의 `KAKAO_URL` 도 함께) |
 | OG 공유 이미지 | `images/og-cover.jpg` 교체 |
+| 로고 | `images/ice-logo.png` (헤더·푸터 공통, 투명 배경) · 탭 아이콘 `favicon.png` / `favicon.svg` |
 
 ## 사진 추가하기
 
@@ -55,13 +57,12 @@ ice-snap-site/
 
 - 금액, 촬영 시간, 컷수, 보정본 전달 일정 — 모두 "재오픈 시 최종 안내"로 표기
 - 돌스냅 포트폴리오 사진 — 20장 수록 완료 (필터 탭 `Dol`). 추가 촬영본이 생기면 갤러리에 이어서 넣으면 됩니다.
-- 카카오톡 채널 — 아직 링크가 없어 인스타그램 DM 중심으로 구성
 
 ## 참고
 
 - 디자인 톤: 웜 아이보리(`#FAF9F7`) · 소프트 스톤(`#F4F2ED`) 바탕에 잉크색 글자, 1px 헤어라인, Cormorant Garamond 이탤릭 디스플레이, 알약형(999px) 버튼. 히어로 · Ceremony · 푸터까지 전 구간이 같은 톤을 쓰고, 어두운 화면은 사진을 크게 볼 때의 라이트박스에만 남겨 두었습니다.
 - 폰트: Google Fonts (Cormorant Garamond · Noto Serif KR · Noto Sans KR) + 시스템 폰트 폴백
-- 문의 양식은 서버로 전송되지 않습니다. 문장을 만들어 클립보드에 복사하고 `https://ig.me/m/ice__snap` DM을 여는 방식입니다.
+- 문의 양식은 서버로 전송되지 않습니다. 문장을 만들어 클립보드에 복사한 뒤 인스타그램 DM(`https://ig.me/m/ice__snap`)이나 카카오톡 오픈채팅(`https://open.kakao.com/o/syJFXEwg`)을 여는 방식입니다.
 - 모든 사진은 아이스스냅의 실제 촬영본이며, 원본은 `attachments/2026-11-24/` 에 그대로 보관되어 있습니다.
 - 갤러리 사진 수는 `app.js` 가 DOM에서 세어 필터 숫자를 자동으로 맞춥니다.
 

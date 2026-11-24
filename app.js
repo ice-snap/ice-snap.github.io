@@ -311,6 +311,23 @@
     copyOnly.addEventListener('click', () => copyAction('문의 내용을 복사했어요.'));
   }
 
+  /* 카카오톡 오픈채팅 문의: 문의 문장을 복사하고 오픈채팅방을 연다 */
+  const KAKAO_URL = 'https://open.kakao.com/o/syJFXEwg';
+  const copyAndKakao = $('#copyAndKakao');
+  if (copyAndKakao) {
+    copyAndKakao.addEventListener('click', () => {
+      // 팝업 차단을 피하려고 새 탭을 먼저 연다 (복사는 바로 이어서 실행)
+      window.open(KAKAO_URL, '_blank', 'noopener');
+      copyText(buildMessage()).then((ok) => {
+        toast(
+          ok
+            ? '문의 내용을 복사했어요. 카카오톡 오픈채팅에 붙여넣어 주세요.'
+            : '복사가 되지 않았습니다. 미리보기 문장을 길게 눌러 복사해 주세요.'
+        );
+      });
+    });
+  }
+
   /* ── 기타 ────────────────────────────────────────────────── */
   const year = $('#year');
   if (year) year.textContent = String(new Date().getFullYear());

@@ -7,6 +7,8 @@
 <meta name="description" content="아이스스냅은 아이폰으로 본식 스냅, 야외 스냅, 돌스냅을 촬영하는 스냅 스튜디오입니다. 가장 영화 같은 순간을 가장 가깝게.">
 <meta name="theme-color" content="#FAF9F7">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.png" type="image/png" sizes="512x512">
+<link rel="apple-touch-icon" href="favicon.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="아이스스냅 ICE SNAP — 아이폰 본식·야외·돌스냅">
 <meta property="og:description" content="본식 · 야외 · 돌스냅. 아이폰 하나로, 그날의 공기까지 담습니다.">
@@ -38,12 +40,7 @@
 <!-- ─────────── Header ─────────── -->
 <header class="header" id="header">
   <a class="brand" href="#top" aria-label="아이스스냅 홈">
-    <svg class="monogram" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-      <circle cx="24" cy="24" r="22.5" fill="none" stroke="currentColor" stroke-width="1"/>
-      <text x="24" y="25.5" text-anchor="middle" dominant-baseline="middle"
-            font-family="Cormorant Garamond, Georgia, serif" font-size="14" letter-spacing="0.6"
-            fill="currentColor">ICE</text>
-    </svg>
+    <img class="monogram" src="images/ice-logo.png" alt="" width="419" height="498" decoding="async">
     <span class="brand__word">ICE&nbsp;SNAP</span>
   </a>
 
@@ -79,6 +76,7 @@
     <a href="https://instagram.com/ice__snap" target="_blank" rel="noopener">@ice__snap</a>
     <a href="https://instagram.com/ice__snap.studio" target="_blank" rel="noopener">@ice__snap.studio</a>
     <a href="https://instagram.com/ice__snap.bebe" target="_blank" rel="noopener">@ice__snap.bebe</a>
+    <a href="https://open.kakao.com/o/syJFXEwg" target="_blank" rel="noopener">카카오톡 오픈채팅 문의</a>
   </div>
 </div>
 
@@ -721,7 +719,7 @@
         <li class="step reveal">
           <span class="step__num">01</span>
           <h3>문의</h3>
-          <p>인스타그램 DM으로 희망 날짜와 장소, 촬영 종류를 알려주세요. 아래 문의 양식을 쓰면 문장이 자동으로 만들어집니다.</p>
+          <p>인스타그램 DM 또는 카카오톡 오픈채팅으로 희망 날짜와 장소, 촬영 종류를 알려주세요. 아래 문의 양식을 쓰면 문장이 자동으로 만들어집니다.</p>
         </li>
         <li class="step reveal">
           <span class="step__num">02</span>
@@ -757,7 +755,8 @@
           <details class="qa">
             <summary><span>예약은 어떻게 하나요?</span></summary>
             <div class="qa__body">
-              <p>인스타그램 <a href="https://instagram.com/ice__snap" target="_blank" rel="noopener">@ice__snap</a> DM으로 문의 주시면 됩니다.
+              <p>인스타그램 <a href="https://instagram.com/ice__snap" target="_blank" rel="noopener">@ice__snap</a> DM 또는
+              <a href="https://open.kakao.com/o/syJFXEwg" target="_blank" rel="noopener">카카오톡 오픈채팅</a>으로 문의 주시면 됩니다.
               희망 날짜와 예식장(또는 장소), 촬영 종류를 함께 알려주시면 더 빠르게 답장드릴 수 있어요.</p>
             </div>
           </details>
@@ -827,7 +826,7 @@
           <h2>촬영 문의</h2>
           <p class="contact__lead">
             아래 내용을 채우면 문의 문장이 자동으로 만들어집니다.
-            복사해서 인스타그램 DM으로 보내주세요. 확인하는 대로 답장드립니다.
+            복사해서 인스타그램 DM이나 카카오톡 오픈채팅으로 보내주세요. 확인하는 대로 답장드립니다.
           </p>
 
           <ul class="contact__links">
@@ -842,6 +841,10 @@
             <li>
               <span>Dol Snap · 돌스냅</span>
               <a href="https://instagram.com/ice__snap.bebe" target="_blank" rel="noopener">@ice__snap.bebe</a>
+            </li>
+            <li>
+              <span>KakaoTalk · Open Chat</span>
+              <a class="contact__link--kakao" href="https://open.kakao.com/o/syJFXEwg" target="_blank" rel="noopener">카카오톡 오픈채팅 문의</a>
             </li>
           </ul>
 
@@ -891,10 +894,11 @@
           <div class="form__actions field--full">
             <button class="btn btn--dark" id="copyAndOpen" type="submit">문의 내용 복사하고 DM 보내기</button>
             <a class="btn btn--outline" id="dmLink" href="https://ig.me/m/ice__snap" target="_blank" rel="noopener">@ice__snap DM 열기</a>
+            <button class="btn btn--outline" id="copyAndKakao" type="button">복사하고 카톡 오픈채팅 열기</button>
           </div>
 
           <p class="form__note field--full">
-            문의 내용은 어디에도 저장되지 않습니다. 복사한 문장을 DM에 붙여넣기만 하면 됩니다.
+            문의 내용은 어디에도 저장되지 않습니다. 복사한 문장을 DM이나 카카오톡 오픈채팅에 붙여넣기만 하면 됩니다.
           </p>
         </form>
       </div>
@@ -907,12 +911,7 @@
 <footer class="footer">
   <div class="wrap footer__wrap">
     <div class="footer__brand">
-      <svg class="monogram monogram--lg" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-        <circle cx="24" cy="24" r="22.5" fill="none" stroke="currentColor" stroke-width="1"/>
-        <text x="24" y="25.5" text-anchor="middle" dominant-baseline="middle"
-              font-family="Cormorant Garamond, Georgia, serif" font-size="14" letter-spacing="0.6"
-              fill="currentColor">ICE</text>
-      </svg>
+      <img class="monogram monogram--lg" src="images/ice-logo.png" alt="" width="419" height="498" loading="lazy" decoding="async">
       <p class="footer__word">ICE SNAP</p>
       <p class="footer__tag">아이폰 스냅 스튜디오 · 본식 · 야외 · 돌스냅</p>
     </div>
@@ -923,6 +922,7 @@
         <a href="https://instagram.com/ice__snap" target="_blank" rel="noopener">@ice__snap</a>
         <a href="https://instagram.com/ice__snap.studio" target="_blank" rel="noopener">@ice__snap.studio</a>
         <a href="https://instagram.com/ice__snap.bebe" target="_blank" rel="noopener">@ice__snap.bebe</a>
+        <a href="https://open.kakao.com/o/syJFXEwg" target="_blank" rel="noopener">카카오톡 오픈채팅</a>
       </div>
       <div>
         <p class="footer__label">Menu</p>
