@@ -104,7 +104,6 @@
   /* ── 5. 라이트박스 ──────────────────────────────────────── */
   const lb = $('#lightbox');
   const lbImg = $('#lbImg');
-  const lbCap = $('#lbCap');
   const lbCounter = $('#lbCounter');
   const lbPrev = $('#lbPrev');
   const lbNext = $('#lbNext');
@@ -119,15 +118,8 @@
     const shot = lbList[lbIndex];
     if (!shot || !lbImg) return;
     const img = $('img', shot);
-    const cap = $('figcaption', shot);
-    const cat = $('.shot__cat', shot);
     lbImg.src = img.currentSrc || img.src;
     lbImg.alt = img.alt || '';
-    const catText = cat ? cat.textContent.trim() : '';
-    const capText = cap
-      ? cap.textContent.replace(catText, '').replace(/\s+/g, ' ').trim()
-      : '';
-    lbCap.textContent = [catText, capText].filter(Boolean).join(' · ');
     lbCounter.textContent = `${lbIndex + 1} / ${lbList.length}`;
 
     // 다음 사진 미리 불러오기

@@ -41,7 +41,7 @@ ice-snap-site/
 | --- | --- |
 | 재오픈 상태 배지 | `index.html` 히어로 하단 `.hero__status`, About 안 `.badge` |
 | 서비스 금액 · 컷수 · 보정 일정 | `.card__meta` (현재는 "재오픈 시 최종 안내" 자리표시) |
-| 포트폴리오 사진 순서 · 캡션 · 분류 | `#gallery` 안의 `.shot` (`data-cat="ceremony｜outdoor｜editorial"`) |
+| 포트폴리오 사진 순서 · 분류 | `#gallery` 안의 `.shot` (`data-cat="ceremony｜outdoor｜editorial｜dol"`) |
 | 필터 개수 표시 | `.filter` 버튼 안 숫자, 히어로 아래 `#countAll` |
 | 인스타그램 주소 | 헤더 · Contact · Footer 의 `instagram.com/ice__snap`, `ice__snap.studio`, `ice__snap.bebe` |
 | 카카오톡 오픈채팅 링크 | 드로어 · Process 01 · FAQ · Contact 링크 · 문의 폼 버튼 · Footer 의 `https://open.kakao.com/o/syJFXEwg` (링크가 바뀌면 `app.js` 의 `KAKAO_URL` 도 함께) |
@@ -52,7 +52,7 @@ ice-snap-site/
 ## 사진 추가하기
 
 1. 사진을 `images/` 에 넣고 긴 변 1400px 정도의 JPEG(q84)로 저장
-2. `#gallery` 안에 `.shot` 하나를 복사해 `src` · `alt` · 캡션 · `data-cat` 수정
+2. `#gallery` 안에 `.shot` 하나를 복사해 `src` · `alt` · `data-cat` 수정 (사진 아래 제목·캡션은 표시하지 않습니다)
 3. `.filter` 와 `#countAll` 의 숫자를 갱신
 
 ## 아직 확정되지 않은 항목 (자리표시)
@@ -74,6 +74,7 @@ ice-snap-site/
 - 폰트: Google Fonts (Cormorant Garamond · Noto Serif KR · Noto Sans KR) + 시스템 폰트 폴백
 - 문의 양식은 서버로 전송되지 않습니다. 문장을 만들어 클립보드에 복사한 뒤 인스타그램 DM(`https://ig.me/m/ice__snap`)이나 카카오톡 오픈채팅(`https://open.kakao.com/o/syJFXEwg`)을 여는 방식입니다.
 - 모든 사진은 아이스스냅의 실제 촬영본이며, 원본은 `attachments/2026-11-24/` 에 그대로 보관되어 있습니다.
+- 사진에는 제목·캡션을 달지 않습니다. 사진만 깔끔하게 보이도록 히어로·Ceremony 띠·포트폴리오·라이트박스 어디에도 캡션이 없고, `alt`(화면 읽기용 설명)만 남겨 두었습니다.
 - 갤러리 사진 수는 `app.js` 가 DOM에서 세어 필터 숫자를 자동으로 맞춥니다.
 
 ## 미리보기 이미지
