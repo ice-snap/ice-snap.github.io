@@ -955,6 +955,13 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+<!-- 배경음악: 방문자가 버튼을 눌렀을 때만 재생됩니다 (audio/bgm.mp3) -->
+<audio id="bgmAudio" src="audio/bgm.mp3" loop preload="metadata" playsinline></audio>
+<button class="bgm-btn" id="bgmBtn" type="button" aria-pressed="false" aria-label="배경음악 재생">
+  <span class="bgm-btn__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+  <span class="bgm-btn__label" id="bgmLabel">♪ BGM</span>
+</button>
+
 <script src="app.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════════════════════════════
    ICE SNAP — app.js
    1) 헤더 상태   2) 모바일 메뉴   3) 등장 애니메이션
-   4) 포트폴리오 필터   5) 라이트박스   6) 문의 문장 생성·복사
+   4) 포트폴리오 필터   5) 라이트박스   6) 문의 문장 생성·복사   7) 배경음악
    ═══════════════════════════════════════════════════════════════ */
 (function () {
   'use strict';
@@ -328,7 +328,44 @@
     });
   }
 
-  /* ── 기타 ────────────────────────────────────────────────── */
+  /* ── 7. 배경음악 ──────────────────────────────────────── */
+  const bgm = $('#bgmAudio');
+  const bgmBtn = $('#bgmBtn');
+  const bgmLabel = $('#bgmLabel');
+  if (bgm && bgmBtn) {
+    bgm.loop = true;
+    bgm.volume = 0.35; // 은은하게
+
+    const setBgmState = (playing) => {
+      bgmBtn.classList.toggle('is-playing', playing);
+      bgmBtn.setAttribute('aria-pressed', playing ? 'true' : 'false');
+      bgmBtn.setAttribute('aria-label', playing ? '배경음악 끄기' : '배경음악 재생');
+      if (bgmLabel) bgmLabel.textContent = playing ? '♪ BGM · ON' : '♪ BGM';
+    };
+
+    bgmBtn.addEventListener('click', () => {
+      if (bgm.paused) {
+        const p = bgm.play();
+        if (p && typeof p.catch === 'function') {
+          p.then(() => setBgmState(true)).catch(() => {
+            setBgmState(false);
+            toast('브라우저가 자동 재생을 막았어요. 버튼을 한 번 더 눌러 주세요.');
+          });
+        } else {
+          setBgmState(true);
+        }
+      } else {
+        bgm.pause();
+        setBgmState(false);
+      }
+    });
+
+    bgm.addEventListener('play', () => setBgmState(true));
+    bgm.addEventListener('pause', () => setBgmState(false));
+    setBgmState(false);
+  }
+
+  /* ── 기타 ──────────────────────────────────────────────── */
   const year = $('#year');
   if (year) year.textContent = String(new Date().getFullYear());
 

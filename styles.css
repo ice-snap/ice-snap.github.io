@@ -624,13 +624,43 @@ h2{
 
 /* ─────────── Toast ─────────── */
 .toast{
-  position:fixed; left:50%; bottom:26px; transform:translate(-50%, 14px);
+  position:fixed; left:50%; bottom:84px; transform:translate(-50%, 14px);
   background:var(--ink); color:var(--paper); padding:12px 22px; border-radius:999px;
   font-size:.78rem; letter-spacing:.02em; opacity:0; pointer-events:none;
   transition:opacity .35s var(--ease), transform .35s var(--ease);
   z-index:150; max-width:88vw; text-align:center;
 }
 .toast.is-on{ opacity:1; transform:translate(-50%,0); }
+
+/* ─────────── BGM 버튼 ─────────── */
+.bgm-btn{
+  position:fixed; right:clamp(16px,2.4vw,28px); bottom:clamp(16px,2.4vw,28px); z-index:70;
+  display:inline-flex; align-items:center; gap:10px;
+  padding:11px 17px 11px 15px; border-radius:999px;
+  background:rgba(250,249,247,.92); border:1px solid var(--line); color:var(--ink);
+  font-size:.7rem; letter-spacing:.16em; text-transform:uppercase; line-height:1;
+  box-shadow:0 6px 22px rgba(22,22,21,.09);
+  -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+  transition:background .45s var(--ease), color .45s var(--ease),
+  border-color .45s var(--ease), box-shadow .45s var(--ease);
+}
+.bgm-btn:hover{ border-color:var(--line-strong); box-shadow:0 8px 26px rgba(22,22,21,.13); }
+.bgm-btn:active{ transform:translateY(1px); }
+.bgm-btn__bars{ display:inline-flex; align-items:flex-end; gap:2px; height:11px; }
+.bgm-btn__bars i{
+  display:block; width:2px; height:4px; background:currentColor; opacity:.5;
+  transition:height .3s var(--ease), opacity .3s var(--ease);
+}
+.bgm-btn__bars i:nth-child(2){ height:8px; }
+.bgm-btn__bars i:nth-child(3){ height:6px; }
+.bgm-btn.is-playing{
+  background:var(--ink); border-color:var(--ink); color:var(--paper);
+  box-shadow:0 8px 24px rgba(22,22,21,.18);
+}
+.bgm-btn.is-playing .bgm-btn__bars i{ opacity:1; animation:bgmBar 1.2s var(--ease) infinite; }
+.bgm-btn.is-playing .bgm-btn__bars i:nth-child(2){ animation-delay:.18s; }
+.bgm-btn.is-playing .bgm-btn__bars i:nth-child(3){ animation-delay:.36s; }
+@keyframes bgmBar{ 0%,100%{ height:4px; } 50%{ height:11px; } }
 
 /* ─────────── Reveal ─────────── */
 .reveal{ opacity:0; transform:translateY(16px); transition:opacity 1s var(--ease), transform 1s var(--ease); }
@@ -693,4 +723,5 @@ h2{
   }
   .reveal{ opacity:1; transform:none; }
   .marquee__track{ animation:none; }
+  .bgm-btn.is-playing .bgm-btn__bars i{ animation:none; height:7px; }
 }

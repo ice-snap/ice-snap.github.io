@@ -16,9 +16,10 @@
 ice-snap-site/
 ├── index.html              전체 페이지 (모든 문구는 여기서 수정)
 ├── styles.css              디자인 (색 · 타이포 · 간격)
-├── app.js                  메뉴 · 필터 · 라이트박스 · 문의 문장 생성 · 카톡 오픈채팅 연결
+├── app.js                  메뉴 · 필터 · 라이트박스 · 문의 문장 생성 · 카톡 오픈채팅 연결 · 배경음악 토글
 ├── favicon.svg / favicon.png  브라우저 탭 아이콘 (ICE 모노그램)
 ├── images/                 실제 촬영본 53장 (본식 17 · 야외 5 · 에디토리얼 11 · 돌스냅 20, 긴 변 1400px JPEG q84) + og-cover.jpg + ice-logo.png (로고, 투명 배경)
+└── audio/bgm.mp3           배경음악 (4분, Smooth Jazz Cafe — Pixabay License, 상업적 사용 가능)
 ```
 
 ## 로컬에서 보기
@@ -46,6 +47,7 @@ ice-snap-site/
 | 카카오톡 오픈채팅 링크 | 드로어 · Process 01 · FAQ · Contact 링크 · 문의 폼 버튼 · Footer 의 `https://open.kakao.com/o/syJFXEwg` (링크가 바뀌면 `app.js` 의 `KAKAO_URL` 도 함께) |
 | OG 공유 이미지 | `images/og-cover.jpg` 교체 |
 | 로고 | `images/ice-logo.png` (헤더·푸터 공통, 투명 배경) · 탭 아이콘 `favicon.png` / `favicon.svg` |
+| 배경음악 | `audio/bgm.mp3` 파일을 같은 이름으로 바꿔 넣으면 바로 교체됩니다 (`index.html` 의 `#bgmAudio`) |
 
 ## 사진 추가하기
 
@@ -57,6 +59,13 @@ ice-snap-site/
 
 - 금액, 촬영 시간, 컷수, 보정본 전달 일정 — 모두 "재오픈 시 최종 안내"로 표기
 - 돌스냅 포트폴리오 사진 — 20장 수록 완료 (필터 탭 `Dol`). 추가 촬영본이 생기면 갤러리에 이어서 넣으면 됩니다.
+
+## 배경음악
+
+- 오른쪽 아래 알약 버튼(`♪ BGM`)을 누르면 `audio/bgm.mp3` 가 반복 재생됩니다. 방문자가 직접 누르기 전에는 소리가 나지 않습니다.
+- 곡을 바꾸려면 `audio/bgm.mp3` 를 같은 파일명으로 교체하면 됩니다. 기본 음량은 `app.js` 의 `bgm.volume` (0.35)에서 조절합니다.
+- 배경음악을 없애려면 `index.html` 의 `<audio id="bgmAudio">` 와 `.bgm-btn` 버튼 블록을 지우면 됩니다 (다른 코드는 그대로 작동합니다).
+- 사용한 곡: 「Smooth Jazz Cafe Session 1」 — sleepvolume, Pixabay Content License (상업적 이용 가능 · 저작자 표시 불필요).
 
 ## 참고
 
