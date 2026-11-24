@@ -41,7 +41,7 @@ ice-snap-site/
 | --- | --- |
 | 재오픈 상태 배지 | `index.html` 히어로 하단 `.hero__status`, About 안 `.badge` |
 | 서비스 금액 · 컷수 · 보정 일정 | `.card__meta` (현재는 "재오픈 시 최종 안내" 자리표시) |
-| 포트폴리오 사진 순서 · 분류 | `#gallery` 안의 `.shot` (`data-cat="ceremony｜outdoor｜editorial｜dol"`) |
+| 포트폴리오 사진 순서 · 분류 | `#gallery` 안의 `.shot` (`data-cat="wedding｜dol"`) |
 | 필터 개수 표시 | `.filter` 버튼 안 숫자, 히어로 아래 `#countAll` |
 | 인스타그램 주소 | 헤더 · Contact · Footer 의 `instagram.com/ice__snap`, `ice__snap.studio`, `ice__snap.bebe` |
 | 카카오톡 오픈채팅 링크 | 드로어 · Process 01 · FAQ · Contact 링크 · 문의 폼 버튼 · Footer 의 `https://open.kakao.com/o/syJFXEwg` (링크가 바뀌면 `app.js` 의 `KAKAO_URL` 도 함께) |
