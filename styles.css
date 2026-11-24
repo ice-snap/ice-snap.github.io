@@ -388,6 +388,17 @@ h2{
 }
 .card__list li::before{ content:"—"; color:var(--stone); margin-right:10px; }
 .card__foot{ margin-top:auto; padding-top:26px; }
+.card__price{
+  margin:0 0 14px;
+  font-family:var(--font-display); font-weight:400;
+  font-size:1.42rem; line-height:1.2; letter-spacing:.005em;
+}
+.card__price .card__won{ font-size:.64em; margin-left:.12em; letter-spacing:.03em; }
+.card__price small{
+  display:inline-block; margin-left:.9em; vertical-align:.16em;
+  font-family:var(--font-sans); font-weight:300; font-size:.64rem;
+  letter-spacing:.16em; color:var(--stone);
+}
 .card__meta{
   margin:0; padding-top:14px; border-top:1px dashed var(--line-strong);
   font-size:.72rem; letter-spacing:.02em; color:var(--stone);

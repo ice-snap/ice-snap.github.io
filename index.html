@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Sans+KR:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261124f">
+<link rel="stylesheet" href="styles.css?v=20261124g">
 </head>
 <body>
 
@@ -576,7 +576,7 @@
         <p>결혼식장에서, 바깥에서, 그리고 아기의 첫 생일에서. 같은 아이폰, 같은 시선으로 담습니다.</p>
       </div>
 
-      <!-- EDIT: 금액 · 시간 · 컷수 등 확정된 내용이 생기면 각 카드의 .card__meta 에 채워 넣으세요 -->
+      <!-- EDIT: 가격은 옛 예약 시트 '견적안내' 탭(2025-12-03) 기준 — 본식·야외·돌 정가 300,000원, 예약금 50%. 컷수·보정 일정은 아직 미정이라 상담 시 안내로 남겨두었고, 확정되면 각 카드 .card__meta 에 덧붙이면 됩니다. -->
       <div class="cards">
         <article class="card reveal">
           <span class="card__num">01</span>
@@ -591,7 +591,8 @@
             <li>하객 · 가족 스냅 포함</li>
           </ul>
           <div class="card__foot">
-            <p class="card__meta">금액 · 촬영 시간 · 컷수 — 재오픈 시 최종 안내</p>
+            <p class="card__price">300,000<span class="card__won">원</span> <small>정가</small></p>
+            <p class="card__meta">예약금 150,000원 (50%) · 잔금 150,000원</p>
           </div>
         </article>
 
@@ -608,7 +609,8 @@
             <li>본식 전후 · 기념일 촬영 가능</li>
           </ul>
           <div class="card__foot">
-            <p class="card__meta">금액 · 이동 범위 · 촬영 시간 — 재오픈 시 최종 안내</p>
+            <p class="card__price">300,000<span class="card__won">원</span> <small>단품 정가</small></p>
+            <p class="card__meta">예약금 150,000원 (50%) · 본식 함께 시 600,000원</p>
           </div>
         </article>
 
@@ -629,13 +631,15 @@
             <a href="https://instagram.com/ice__snap.bebe" target="_blank" rel="noopener">@ice__snap.bebe</a>에서 확인하실 수 있어요.
           </p>
           <div class="card__foot">
-            <p class="card__meta">금액 · 컷수 — 재오픈 시 최종 안내</p>
+            <p class="card__price">300,000<span class="card__won">원</span> <small>정가</small></p>
+            <p class="card__meta">예약금 150,000원 (50%) · 잔금 150,000원</p>
           </div>
         </article>
       </div>
 
       <p class="services__note reveal">
-        모든 일정과 비용은 상담 후 확정됩니다. 아직 공개되지 않은 금액·컷수·보정 일정은 재오픈 시 안내드립니다.
+        기본 정가 300,000원 기준(예약금 50% · 150,000원)이며, 본식·스튜디오/야외 함께 진행 시 600,000원입니다.
+        컷수·보정 일정 및 할인·출장비는 상담 시 안내드립니다.
       </p>
     </div>
   </section>
@@ -661,7 +665,7 @@
         <li class="step reveal">
           <span class="step__num">02</span>
           <h3>상담 · 일정 확정</h3>
-          <p>가능한 일정과 진행 방식을 안내드리고, 예약금 안내 후 일정을 확정합니다.</p>
+          <p>가능한 일정과 진행 방식을 안내드리고, 예약금(50%) 입금 확인 후 일정을 확정합니다.</p>
         </li>
         <li class="step reveal">
           <span class="step__num">03</span>
@@ -695,6 +699,15 @@
               <p>인스타그램 <a href="https://instagram.com/ice__snap" target="_blank" rel="noopener">@ice__snap</a> DM 또는
               <a href="https://open.kakao.com/o/syJFXEwg" target="_blank" rel="noopener">카카오톡 오픈채팅</a>으로 문의 주시면 됩니다.
               희망 날짜와 예식장(또는 장소), 촬영 종류를 함께 알려주시면 더 빠르게 답장드릴 수 있어요.</p>
+            </div>
+          </details>
+
+          <details class="qa">
+            <summary><span>촬영 금액과 예약금은 어떻게 되나요?</span></summary>
+            <div class="qa__body">
+              <p>본식 스냅·야외(스튜디오)·돌스냅 모두 기본 정가 300,000원(예약금 50% 150,000원 · 잔금 150,000원)이며,
+              본식과 스튜디오·야외 촬영을 함께 진행하실 경우 600,000원(예약금 300,000원 · 잔금 300,000원)입니다.
+              컷수·보정 일정 및 출장·할인 조건은 상담 시 자세히 안내해 드립니다.</p>
             </div>
           </details>
 
@@ -898,6 +911,6 @@
   <span class="bgm-btn__label" id="bgmLabel">♪ BGM</span>
 </button>
 
-<script src="app.js?v=20261124f"></script>
+<script src="app.js?v=20261124g"></script>
 </body>
 </html>
