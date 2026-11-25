@@ -18,7 +18,7 @@ ice-snap-site/
 ├── styles.css              디자인 (색 · 타이포 · 간격)
 ├── app.js                  메뉴 · 필터 · 라이트박스 · 문의 문장 생성 · 카톡 오픈채팅 연결 · 배경음악 토글
 ├── favicon.svg / favicon.png  브라우저 탭 아이콘 (ICE 모노그램)
-├── images/                 실제 촬영본 53장 (본식 17 · 야외 5 · 에디토리얼 11 · 돌스냅 20, 긴 변 1400px JPEG q84) + og-cover.jpg + ice-logo.png (로고, 투명 배경)
+├── images/                 실제 촬영본 61장 (본식 17 · 야외 5 · 에디토리얼 11 · 스튜디오 8 · 돌스냅 20, 긴 변 1400px JPEG q84) + og-cover.jpg + ice-logo.png (로고, 투명 배경)
 └── audio/bgm.mp3           배경음악 (4분, Smooth Jazz Cafe — Pixabay License, 상업적 사용 가능)
 ```
 
@@ -43,7 +43,7 @@ ice-snap-site/
 | 서비스 금액 · 예약금 · 컷수 · 보정 일정 | 각 카드의 `.card__price`(정가) · `.card__meta`(예약금·잔금). 지금은 본식·돌 300,000원, 야외 500,000원 · 예약금 50% |
 | 포트폴리오 사진 순서 · 분류 | `#gallery` 안의 `.shot` (`data-cat="wedding｜dol"`) |
 | 필터 개수 표시 | `.filter` 버튼 안 숫자, 히어로 아래 `#countAll` |
-| 인스타그램 주소 | 헤더 · Contact · Footer 의 `instagram.com/ice__snap`, `ice__snap.studio`, `ice__snap.bebe` |
+| 인스타그램 주소 | 헤더 · Contact · Footer 의 `instagram.com/ice__snap`, `ice__snap.studio`, `ice__snap.bebe` / Services 카드 하단 `.card__aside` (01 Wedding → `@ice__snap`, 02 Outdoor → `@ice__snap.studio`, 03 Dol → `@ice__snap.bebe`) |
 | 카카오톡 오픈채팅 링크 | 드로어 · Process 01 · FAQ · Contact 링크 · 문의 폼 버튼 · Footer 의 `https://open.kakao.com/o/syJFXEwg` (링크가 바뀌면 `app.js` 의 `KAKAO_URL` 도 함께) |
 | OG 공유 이미지 | `images/og-cover.jpg` 교체 |
 | 로고 | `images/ice-logo.png` (헤더·푸터 공통, 투명 배경) · 탭 아이콘 `favicon.png` / `favicon.svg` |
