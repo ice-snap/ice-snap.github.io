@@ -1,6 +1,6 @@
 # 아이스스냅 · ICE SNAP
 
-아이폰 본식 · 야외 · 돌스냅의 미니멀 포트폴리오 사이트입니다.
+아이폰 웨딩 · 돌 · 스튜디오 · 야외 스냅의 미니멀 포트폴리오 사이트입니다.
 빌드 도구 없이 `index.html` · `styles.css` · `app.js` · `images/` 만으로 동작하는 정적 사이트입니다.
 
 > **바로 고치기 (제일 쉬운 방법)**
@@ -35,15 +35,24 @@ ice-snap-site/
 - **Netlify** — 폴더를 그대로 드래그 앤 드롭
 - **Vercel** — `vercel` 로 폴더 배포 (프레임워크 없음 / 정적)
 
+## 상품 구성 (ICE Ⅰ · ICE Ⅱ)
+
+| 상품 | 구성 | 가격 | 예약금 |
+| --- | --- | --- | --- |
+| **ICE Ⅰ** | 웨딩(서브)스냅 · 돌(서브)스냅 · 스튜디오(서브)스냅 | 300,000원 | 150,000원 (50%) · 잔금 150,000원 |
+| **ICE Ⅱ** | 스튜디오 · 야외스냅 | 500,000원 | 250,000원 (50%) · 잔금 250,000원 |
+
+두 상품을 동시에 진행할 경우 가격은 별도 문의, 컷수·보정 일정·출장비는 상담 시 안내합니다.
+
 ## 수정할 곳 (HTML 주석 `<!-- EDIT: -->` 표시)
 
 | 항목 | 위치 |
 | --- | --- |
 | 재오픈 상태 배지 | `index.html` 히어로 하단 `.hero__status`, About 안 `.badge` |
-| 서비스 금액 · 예약금 · 컷수 · 보정 일정 | 각 카드의 `.card__price`(정가) · `.card__meta`(예약금·잔금). 지금은 본식·돌 300,000원, 야외 500,000원 · 예약금 50% |
+| 서비스 금액 · 예약금 · 컷수 · 보정 일정 | 각 카드의 `.card__price`(정가) · `.card__meta`(예약금·잔금). 지금은 ICE Ⅰ 300,000원 · ICE Ⅱ 500,000원 · 예약금 50% · 동시 진행은 별도 문의 |
 | 포트폴리오 사진 순서 · 분류 | `#gallery` 안의 `.shot` (`data-cat="wedding｜dol"`) |
 | 필터 개수 표시 | `.filter` 버튼 안 숫자, 히어로 아래 `#countAll` |
-| 인스타그램 주소 | 헤더 · Contact · Footer 의 `instagram.com/ice__snap`, `ice__snap.studio`, `ice__snap.bebe` / Services 카드 하단 `.card__aside` (01 Wedding → `@ice__snap`, 02 Outdoor → `@ice__snap.studio`, 03 Dol → `@ice__snap.bebe`) |
+| 인스타그램 주소 | 헤더 · Contact · Footer 의 `instagram.com/ice__snap`, `ice__snap.studio`, `ice__snap.bebe` / Services 카드 하단 `.card__aside` (01 ICE Ⅰ → `@ice__snap`·`@ice__snap.bebe`, 02 ICE Ⅱ → `@ice__snap.studio`) |
 | 카카오톡 오픈채팅 링크 | 드로어 · Process 01 · FAQ · Contact 링크 · 문의 폼 버튼 · Footer 의 `https://open.kakao.com/o/syJFXEwg` (링크가 바뀌면 `app.js` 의 `KAKAO_URL` 도 함께) |
 | OG 공유 이미지 | `images/og-cover.jpg` 교체 |
 | 로고 | `images/ice-logo.png` (헤더·푸터 공통, 투명 배경) · 탭 아이콘 `favicon.png` / `favicon.svg` |
@@ -57,7 +66,7 @@ ice-snap-site/
 
 ## 아직 확정되지 않은 항목 (자리표시)
 
-- 금액은 반영 완료(본식·돌스냅 정가 300,000원, 야외 스냅 단품 500,000원, 본식+야외 700,000원, 모두 예약금 50%).
+- 금액은 반영 완료(ICE Ⅰ 300,000원, ICE Ⅱ 500,000원, 모두 예약금 50%, 동시 진행 시 가격 별도 문의).
 - 촬영 시간, 컷수, 보정본 전달 일정 — 아직 미정이라 "상담 시 안내"로 표기
 - 돌스냅 포트폴리오 사진 — 20장 수록 완료 (필터 탭 `Dol`). 추가 촬영본이 생기면 갤러리에 이어서 넣으면 됩니다.
 

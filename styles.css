@@ -360,7 +360,7 @@ h2{
 }
 .services__intro p{ margin:0; max-width:46ch; font-size:.86rem; color:var(--stone); }
 .cards{
-  display:grid; grid-template-columns:repeat(3,1fr);
+  display:grid; grid-template-columns:repeat(2,1fr);
   gap:clamp(28px,4vw,56px);
   margin-top:clamp(40px,5vw,72px);
 }

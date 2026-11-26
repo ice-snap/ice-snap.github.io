@@ -204,9 +204,11 @@
   };
 
   const getDmTarget = () => {
-    return val('f-type') === '돌스냅'
-      ? { handle: '@ice__snap.bebe', url: 'https://ig.me/m/ice__snap.bebe' }
-      : { handle: '@ice__snap', url: 'https://ig.me/m/ice__snap' };
+    const type = val('f-type');
+    // ICE Ⅰ — 돌(서브)스냅 → 돌스냅 전용 계정, ICE Ⅱ — 스튜디오 · 야외스냅 → 서브 계정
+    if (type.indexOf('돌') !== -1) return { handle: '@ice__snap.bebe', url: 'https://ig.me/m/ice__snap.bebe' };
+    if (type.indexOf('Ⅱ') !== -1) return { handle: '@ice__snap.studio', url: 'https://ig.me/m/ice__snap.studio' };
+    return { handle: '@ice__snap', url: 'https://ig.me/m/ice__snap' };
   };
 
   const formatDate = (v) => {
