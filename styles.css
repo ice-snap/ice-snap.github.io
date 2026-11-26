@@ -407,7 +407,7 @@ h2{
 .card__aside a{ border-bottom:1px solid var(--line-strong); }
 .card__aside a:hover{ border-color:var(--ink); color:var(--ink); }
 .services__note{
-  margin:clamp(36px,4vw,56px) 0 0; max-width:66ch; font-size:.8rem;
+  margin:clamp(36px,4vw,56px) 0 0; max-width:76ch; font-size:.8rem;
   color:var(--stone); line-height:1.9;
 }
 
